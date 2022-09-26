@@ -51,13 +51,13 @@ response = requests.request("GET", url, headers=headers, params=querystring)
 print(response.text)
 
 tekst = response.json()
-df = pd.DataFrame.from_dict(tekst)
+#df = pd.DataFrame.from_dict(tekst)
 
 
-df_data = pd.DataFrame(df['data'].values.tolist(), index=df.index)
-df2 = pd.concat([df, df_data], axis=1).drop('data', axis=1)
-df_data = pd.DataFrame(df2['weather'].values.tolist(), index=df.index) 
-df2 = pd.concat([df2, df_data], axis=1).drop('weather', axis=1)
+#df_data = pd.DataFrame(df['data'].values.tolist(), index=df.index)
+#df2 = pd.concat([df, df_data], axis=1).drop('data', axis=1)
+#df_data = pd.DataFrame(df2['weather'].values.tolist(), index=df.index) 
+#df2 = pd.concat([df2, df_data], axis=1).drop('weather', axis=1)
 
 st.title('Dropdown Menu')
 st.dataframe(df2)
