@@ -32,8 +32,8 @@ headers = {
 combo_list=[]
 original_list = []
 combo_list.append(Land("Frankrijk, Arras", 2.77, 50.29))
-combo_list.append(Land("Ecuador, Guayaquil", -79.89745, -2.203816))
-combo_list.append(Land("Turkije, Ankara", 32.8597, 39.9334))
+combo_list.append(Land("Ecuador, Guayaquil", -79.89, -2.20))
+combo_list.append(Land("Turkije, Ankara", 32.85, 39.93))
 
 for obj in combo_list:
   original_list.append(obj.land)
