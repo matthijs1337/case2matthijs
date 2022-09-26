@@ -35,7 +35,7 @@ combo_list=[]
 original_list = []
 combo_list.append(Land("Frankrijk, Arras", 2.77, 50.29))
 combo_list.append(Land("Ecuador, Guayaquil", -79.177427, -0.238905))
-combo_list.append(Land("ETurkye, Guayaquil", -79.177427, -0.238905))
+combo_list.append(Land("Turkye, Ankara", 32.8597, 39.9334))
 
 for obj in combo_list:
   original_list.append(obj.land)
