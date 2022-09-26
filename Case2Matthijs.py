@@ -16,7 +16,7 @@ class Land:
     self.longitude = longitude
     self.latitude = latitude
     
-  def show_all(self)
+  def show_all(self):
     print (self.land, self.longitude, self.latitude)
 
 url = "https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly"
