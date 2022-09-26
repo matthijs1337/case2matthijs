@@ -32,12 +32,16 @@ df2 = pd.concat([df, df_data], axis=1).drop('data', axis=1)
 df_data = pd.DataFrame(df2['weather'].values.tolist(), index=df.index) 
 df2 = pd.concat([df2, df_data], axis=1).drop('weather', axis=1)
 
-st.title('hoi')
+st.title('Dropdown Menu')
 st.dataframe(df2)
+
 original_list = ['Frankrijk', 'Ecuador']
 
 result = st.selectbox('Selecteer het land', original_list)
-st.write(f'Selecteer het land: {result}')
+st.write(f'Het gekozen land {result}')
+
+
+
 
 print(df2.info())
 
