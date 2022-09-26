@@ -10,6 +10,15 @@ import pandas as pd
 import requests
 import streamlit as st
 
+class Land:
+  def __init__ (self, land, longitude, latitude):
+    self.land = land
+    self.longitude = longitude
+    self.latitude = latitude
+    
+  def show_all(self)
+    print (self.land, self.longitude, self.latitude)
+
 url = "https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly"
 
 querystring = {"lat":"52.5","lon":"4.8"}
@@ -35,12 +44,16 @@ df2 = pd.concat([df2, df_data], axis=1).drop('weather', axis=1)
 st.title('Dropdown Menu')
 st.dataframe(df2)
 
-original_list = ['Frankrijk, Arras', 'Ecuador, Guayaquil']
+#original_list = ['Frankrijk, Arras', 'Ecuador, Guayaquil']
+
+original_list = []
+original_list.append (Land("Nederland", 5.6462914, 52.1009166))
+original_list.append (Land("Frankrijk", 2.213749, 46.227638, 52.1009166))
 
 result = st.selectbox('Selecteer het land', original_list)
 st.write(f'De gekozen plek {result}')
 
-
+Frankrijk, Arras = 
 
 
 print(df2.info())
