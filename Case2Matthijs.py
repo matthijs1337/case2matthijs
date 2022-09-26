@@ -60,9 +60,9 @@ tekst = response.json()
 #df2 = pd.concat([df2, df_data], axis=1).drop('weather', axis=1)
 
 st.title('Dropdown Menu')
-st.dataframe(df2)
+#st.dataframe(df2)
 
 
 
-print(df2.info())
+#print(df2.info())
 
