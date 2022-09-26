@@ -38,16 +38,18 @@ combo_list.append(Land("Turkije, Ankara", 32.8597, 39.9334))
 for obj in combo_list:
   original_list.append(obj.land)
 
-print(response.text)
+
+
 result = st.selectbox('Selecteer het land', original_list)
 st.write(f'De gekozen plek {result}')
 
 for obj in combo_list:
    if (result == obj.land):
       querystring = {"lat": obj.latitude,"lon":obj.longitude}
+print (queryatring)
 
 response = requests.request("GET", url, headers=headers, params=querystring)
-print (queryatring)
+print(response.text)
 tekst = response.json()
 #df = pd.DataFrame.from_dict(tekst)
 
