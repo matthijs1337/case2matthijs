@@ -32,7 +32,7 @@ headers = {
 combo_list=[]
 original_list = []
 combo_list.append(Land("Frankrijk, Arras", 2.77, 50.29))
-combo_list.append(Land("Ecuador, Guayaquil", -79.897453, -2.203816))
+combo_list.append(Land("Ecuador, Guayaquil", -79.89745, -2.203816))
 combo_list.append(Land("Turkije, Ankara", 32.8597, 39.9334))
 
 for obj in combo_list:
@@ -52,18 +52,16 @@ st.write(f'{querystring}')
 response = requests.request("GET", url, headers=headers, params=querystring)
 print(response.text)
 tekst = response.json()
-#df = pd.DataFrame.from_dict(tekst)
+df = pd.DataFrame.from_dict(tekst)
 
 
+df_data = pd.DataFrame(df['data'].values.tolist(), index=df.index)
+df2 = pd.concat([df, df_data], axis=1).drop('data', axis=1)
+df_data = pd.DataFrame(df2['weather'].values.tolist(), index=df.index) 
+df2 = pd.concat([df2, df_data], axis=1).drop('weather', axis=1)
 
-#df_data = pd.DataFrame(df['data'].values.tolist(), index=df.index)
-#df2 = pd.concat([df, df_data], axis=1).drop('data', axis=1)
-#df_data = pd.DataFrame(df2['weather'].values.tolist(), index=df.index) 
-#df2 = pd.concat([df2, df_data], axis=1).drop('weather', axis=1)
-
-#st.dataframe(df2)
-
+st.dataframe(df2)
 
 
-#print(df2.info())
+print(df2.info())
 
