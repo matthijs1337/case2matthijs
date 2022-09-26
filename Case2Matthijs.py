@@ -47,7 +47,7 @@ for obj in combo_list:
    if (result == obj.land):
       querystring = {"lat": obj.latitude,"lon":obj.longitude}
 
-print (querystring)
+st.write(f'{querystring}')
 
 response = requests.request("GET", url, headers=headers, params=querystring)
 print(response.text)
