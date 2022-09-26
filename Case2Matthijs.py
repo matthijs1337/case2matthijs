@@ -47,8 +47,7 @@ st.dataframe(df2)
 
 #original_list = ['Frankrijk, Arras', 'Ecuador, Guayaquil']
 
-combo_list[]
-
+combo_list=[]
 original_list = []
 original_list.append (Land("Frankrijk, Arras", 2.77, 50.29))
 original_list.append (Land("Ecuador, Guayaquil", -79.177427, -0.238905))
