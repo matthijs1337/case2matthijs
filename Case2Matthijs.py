@@ -21,12 +21,32 @@ class Land:
 
 url = "https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly"
 
-querystring = {"lat":"52.5","lon":"4.8"}
+
 
 headers = {
  	"X-RapidAPI-Key": "a929aa606bmsh42432cc9b369422p1b8238jsnce8e2abf2f38",
  	"X-RapidAPI-Host": "weatherbit-v1-mashape.p.rapidapi.com"
 }
+
+
+#original_list = ['Frankrijk, Arras', 'Ecuador, Guayaquil']
+
+combo_list=[]
+original_list = []
+combo_list.append(Land("Frankrijk, Arras", 2.77, 50.29))
+combo_list.append(Land("Ecuador, Guayaquil", -79.177427, -0.238905))
+combo_list.append(Land("ETurkye, Guayaquil", -79.177427, -0.238905))
+
+for obj in combo_list:
+  original_list.append(obj.land)
+
+result = st.selectbox('Selecteer het land', original_list)
+st.write(f'De gekozen plek {result}')
+
+
+for obj in combo_list:
+   if (result == obj.land):
+      querystring = {"lat": obj.latitude,"lon":obj.longitude}
 
 response = requests.request("GET", url, headers=headers, params=querystring)
 
@@ -44,21 +64,6 @@ df2 = pd.concat([df2, df_data], axis=1).drop('weather', axis=1)
 
 st.title('Dropdown Menu')
 st.dataframe(df2)
-
-#original_list = ['Frankrijk, Arras', 'Ecuador, Guayaquil']
-
-combo_list=[]
-original_list = []
-combo_list.append(Land("Frankrijk333333333, Arras", 2.77, 50.29))
-combo_list.append(Land("Ecuador, Guayaquil", -79.177427, -0.238905))
-combo_list.append(Land("ETurkye, Guayaquil", -79.177427, -0.238905))
-
-for obj in combo_list:
-  original_list.append(obj.land)
-
-result = st.selectbox('Selecteer het land', original_list)
-st.write(f'De gekozen plek {result}')
-
 
 
 
