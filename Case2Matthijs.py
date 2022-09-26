@@ -46,7 +46,7 @@ st.write(f'De gekozen plek {result}')
 for obj in combo_list:
    if (result == obj.land):
       querystring = {"lat": obj.latitude,"lon":obj.longitude}
-print (querys3tring)
+print (querystring)
 
 response = requests.request("GET", url, headers=headers, params=querystring)
 print(response.text)
