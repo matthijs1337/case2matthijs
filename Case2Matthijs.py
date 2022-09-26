@@ -52,6 +52,8 @@ st.write(f'{querystring}')
 response = requests.request("GET", url, headers=headers, params=querystring)
 print(response.text)
 tekst = response.json()
+
+st.write(f'{tekst}')
 df = pd.DataFrame.from_dict(tekst)
 
 
