@@ -53,7 +53,6 @@ original_list.append (Land("Frankrijk", 2.213749, 46.227638, 52.1009166))
 result = st.selectbox('Selecteer het land', original_list)
 st.write(f'De gekozen plek {result}')
 
-Frankrijk, Arras = 
 
 
 print(df2.info())
