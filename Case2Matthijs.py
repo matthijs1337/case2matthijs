@@ -48,7 +48,7 @@ st.dataframe(df2)
 
 original_list = []
 original_list.append (Land("Nederland", 5.6462914, 52.1009166))
-original_list.append (Land("Frankrijk", 2.213749, 46.227638, 52.1009166))
+original_list.append (Land("Frankrijk", 2.213749, 46.227638))
 
 result = st.selectbox('Selecteer het land', original_list)
 st.write(f'De gekozen plek {result}')
