@@ -45,11 +45,11 @@ df2 = pd.concat([df2, df_data], axis=1).drop('weather', axis=1)
 st.title('Dropdown Menu')
 st.dataframe(df2)
 
-original_list = ['Frankrijk, Arras', 'Ecuador, Guayaquil']
+#original_list = ['Frankrijk, Arras', 'Ecuador, Guayaquil']
 
-#original_list = []
-#original_list.append (Land("Nederland", 5.6462914, 52.1009166))
-#original_list.append (Land("Frankrijk", 2.213749, 46.227638))
+original_list = []
+original_list.append (Land("Frankrijk, Arras", 2.77, 50.29))
+original_list.append (Land("Ecuador, Guayaquil", -79.177427, -0.238905))
 
 result = st.selectbox('Selecteer het land', original_list)
 st.write(f'De gekozen plek {result}')
