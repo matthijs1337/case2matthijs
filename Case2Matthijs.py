@@ -21,19 +21,19 @@ class Land:
 
 url = "https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly"
 
-#querystring = {"lat":"52.5","lon":"4.8"}
+querystring = {"lat":"52.5","lon":"4.8"}
 
 headers = {
  	"X-RapidAPI-Key": "a929aa606bmsh42432cc9b369422p1b8238jsnce8e2abf2f38",
  	"X-RapidAPI-Host": "weatherbit-v1-mashape.p.rapidapi.com"
 }
 
-#response = requests.request("GET", url, headers=headers, params=querystring)
+response = requests.request("GET", url, headers=headers, params=querystring)
 
-#print(response.text)
+print(response.text)
 
-#tekst = response.json()
-#df = pd.DataFrame.from_dict(tekst)
+tekst = response.json()
+df = pd.DataFrame.from_dict(tekst)
 
 
 
