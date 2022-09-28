@@ -30,7 +30,7 @@ url = "https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly"
 
 
 headers = {
- 	"X-RapidAPI-Key": "19371bb78bmsha38002b17dbf6c7p198e30jsn6f6685e527ab",
+  "X-RapidAPI-Key":"f63be25ec8msh09be29d15fcc4fbp1f0f6ejsn82d64b7f3674",
  	"X-RapidAPI-Host": "weatherbit-v1-mashape.p.rapidapi.com"
 }
 
