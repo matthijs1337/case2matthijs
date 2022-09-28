@@ -46,14 +46,14 @@ headers = {
 
 combo_list=[]
 original_list = []
-combo_list.append(Land("Arras, Frankrijk", 50.292000, 2.780000))
+combo_list.append(Land("Arras, France", 50.292000, 2.780000))
 combo_list.append(Land("Guayaquil, Ecuador",-2.203816 ,-79.897453))
 combo_list.append(Land("Buenaventura, Colombia", 3.8801, -77.0312))
 combo_list.append(Land("Aomorishi, Japan", 40.650497398, 140.850163266 ))
-combo_list.append(Land("Manhattan, New York, VS", 40.776676, -73.971321))
-combo_list.append(Land("Amsterdam, Nederland", 52.377956, 4.897070))
-combo_list.append(Land("Rome, Italië", 41.902782, 12.496366))
-combo_list.append(Land("Stockholm, Zweden", 59.334591, 18.063240))
+combo_list.append(Land("Manhattan, New York, USA", 40.776676, -73.971321))
+combo_list.append(Land("Amsterdam, The Netherlands", 52.377956, 4.897070))
+combo_list.append(Land("Rome, Italy", 41.902782, 12.496366))
+combo_list.append(Land("Stockholm, Sweden", 59.334591, 18.063240))
 
 for obj in combo_list:
   original_list.append(obj.land)
