@@ -8,6 +8,7 @@ Created on Mon Sep 26 10:59:09 2022
 import pandas as pd
 import requests
 import streamlit as st
+currentmodule:: plotly.graph_objs
 import plotly.graph_objects as go
 
 #import plotly.express as px
