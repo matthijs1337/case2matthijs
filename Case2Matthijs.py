@@ -17,7 +17,6 @@ from dateutil.relativedelta import relativedelta # to add days or years
 import plotly.io as pio
 pio.renderers.default = 'browser'
 
-THEME="config.toml"
 
 class Land:
   def __init__ (self, land, latitude, longitude):
