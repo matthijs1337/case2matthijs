@@ -104,7 +104,7 @@ df2 = pd.concat([df2, df_data], axis=1).drop('weather', axis=1)
 
 st.title("Weather forecast")
 
-st.text("A 5 day weather forecast of different cities with a 3 hour interval."+\
+st.markdown("A 5 day weather forecast of different cities with a 3 hour interval."+\
         "\nThis interactive app has multiple functions; Try them!")
 
 df2['timestamp_local']= pd.to_datetime(df2['timestamp_local'], format='%Y-%m-%dT%H:%M:%S')
@@ -241,7 +241,7 @@ df2 = df2[(df2['day'] >= slider_begin) & (df2['day'] <= slider_einde)]
 
 with col1:
     
-    fig = go.Figure(go.Scatter(x = df2['timestamp_local'], y = df2[var_name_dict[var_name]], mode = 'lines'))
+    fig = go.Figure(go.Scatter(x = df2['timestamp_local'], y = df2[var_name_dict[var_name]], mode = 'lines', line_color = 'black'))
     
     fig.update_layout(title_text = (var_name + ' in ' + result), 
                       font = dict(size = 18), title = dict(y = 0.9, x = 0.5, xanchor = 'center', yanchor = 'top'))
