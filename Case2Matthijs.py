@@ -17,11 +17,6 @@ from dateutil.relativedelta import relativedelta # to add days or years
 import plotly.io as pio
 pio.renderers.default = 'browser'
 
-THEMES = [
-    "green"
-
-]
-
 
 
 class Land:
