@@ -17,7 +17,8 @@ from dateutil.relativedelta import relativedelta # to add days or years
 import plotly.io as pio
 pio.renderers.default = 'browser'
 
-
+CURRENT_THEME = "light"
+IS_DARK_THEME = False
 
 
 
