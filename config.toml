@@ -1,8 +1,7 @@
-
-     [theme]
-     primaryColor="#00000"
-   backgroundColor="#002b36"
-   secondaryBackgroundColor="#586e75"
-    textColor="#FFFFFF"
-    font="Copperplate Gothic"
+[theme]
+primaryColor="#00000"
+backgroundColor="#002b36"
+secondaryBackgroundColor="#586e75"
+textColor="#FFFFFF"
+font="Copperplate Gothic"
  
